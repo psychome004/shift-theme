@@ -6,7 +6,14 @@ add_action('wp_enqueue_scripts',function(){
 }, 99);
 
 //Include Files
-include('lib/custom-header/header-functions.php');
+$inc_files = array(
+  'lib/custom-header/header-functions.php',
+  'lib/widgets/widgets.php'
+);
+
+foreach( $inc_files as $inc_file ){
+  require_once( $inc_file );
+}
 
 /* ADD SOW FROM THE THEME */
 add_action('siteorigin_widgets_widget_folders', function( $folders ){
