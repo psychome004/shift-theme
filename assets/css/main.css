@@ -1,0 +1,252 @@
+
+/* NAVBAR */
+.navbar { min-height: 80px; margin-bottom: 0;}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+/* SITE LOGO */
+.logo-normal .desktop-logo{
+  max-width: 400px;
+  margin-top: 20px;
+}
+.logo-normal .visible-xs{
+  max-width: 310px;
+  margin-top: 24px;
+}
+.logo-normal .visible-xs{
+   max-width: 250px;
+   margin-top: 23.5px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  margin-right: 0;
+  padding: 9px 4px !important;
+}
+
+.navbar-toggle.collapsed {
+  padding: 9px 10px !important;
+}
+
+/* Sticky menu */
+.sticky-transparent-header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: 500ms ease;
+}
+/* Sticky menu */
+
+/* Ovverride font styles */
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  position: relative;
+  border-bottom: 4px solid #2e3d59;
+}
+.sticky-transparent-header.affix{
+  background-color: #ffffff;
+}
+
+/* Navbar links */
+.navbar-default .navbar-nav > li > a,
+.navbar .dropdown-menu > li > a{
+  font-weight: bold !important;
+  color: #748093;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #2e3d59;
+}
+/* Navbar links */
+
+/* Active link */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #2e3d59;
+  background-color: transparent;
+}
+/* Active link */
+
+/* Dropdown Menu */
+.navbar .dropdown-menu{
+  padding: 0;
+}
+.navbar .dropdown-menu > li > a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  font-size: 12px;
+}
+.navbar .dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover{
+  color: #ffffff;
+  background-color: #2e3d59;
+}
+/* Highlight Parent Menu Item while Child Menu Item is active */
+.navbar-nav > li.dropdown.current-menu-ancestor > a{ color: #2e3d59; }
+/* Highlight Parent Menu Item while Child Menu Item is active */
+
+/* Active dropdown item */
+.navbar .dropdown-menu > .active > a,
+.navbar .dropdown-menu > .active > a:hover,
+.navbar .dropdown-menu > .active > a:focus{
+  color: #ffffff !important;
+  background-color: #2e3d59;
+}
+/* Active dropdown item */
+
+/* Dropdown Menu */
+
+/* Hamburger */
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  height: 4px;
+  width: 23px;
+  background-color: #2e3d59;
+  transition: transform 0.2s;
+}
+/* Hamburger */
+
+/* Animate hamburger */
+.header5 .navbar-toggle {
+  border-radius: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.header5 .navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.header5 .navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.header5 .navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: -10% 58%;
+}
+.header5 .navbar-toggle.collapsed .top-bar,
+.header5 .navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+.header5 .navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+/* Animate hamburger */
+
+/* Header Right */
+
+/* Social Icons */
+.header5 .social-icons{
+  padding: 23.5px 0;
+}
+.header5 .social-icons > a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  color: #2e3d59;
+  text-align: center;
+  line-height: 30px;
+  border: 2px solid #2e3d59;
+  border-radius: 50%;
+}
+
+.header5 .social-icons > a:not(:first-child){
+  margin-left: 8px;
+}
+
+.header5 .social-icons > a > i{
+  font-size: 16px;
+}
+
+/* MEDIA QUERIES */
+@media( min-width: 769px ){
+
+  /* Ovverride default BS3 styles */
+  .header5.navbar-default{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .header5 .navbar-collapse{padding: 0;}
+  .header5 .container-fluid{ padding: 0;}
+	.header5 .navbar-nav{
+  	float: none;
+  	text-align: center;
+	}
+	.header5 .nav > li {
+		float: none;
+		display: inline-block;
+	}
+  /* Social Icons */
+  .header5 .nav > li.social-icons-wrapper{
+    float: right !important;
+  }
+
+  /* BS3 Nav Links */
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 768px){
+
+  .logo-normal .desktop-logo{
+    margin-left: 15px;
+  }
+  #bs-example-navbar-collapse-1,
+  .navbar.header5 > .container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .header5 .navbar-brand{
+  	padding: 0 9px;
+  }
+
+  .header5 .navbar-nav{
+    margin: 0 -15px;
+  }
+
+  .header5.navbar-default .navbar-nav li a,
+  .header5.navbar-default .navbar-nav li.dropdown a{
+    text-align: center;
+  }
+
+  .header5 .social-icons-wrapper{
+    float: none !important;
+  }
+  .header5 .social-icons{
+    text-align: center;
+    background-color: #2e4857;
+  }
+
+  .header5 .social-icons > a{
+    border-color: #ffffff;
+    background-color: #ffffff;
+  }
+
+}
