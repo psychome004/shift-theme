@@ -249,10 +249,10 @@
 	padding: 0;
 	margin: 0 4px;
 	cursor: pointer;
-  background: rgba(13,130,155, 0.2);
+  background: transparent;
 	outline: none;
 	vertical-align: top;
-  border: 2px solid rgba(13,130,155, 0.2);
+  border: 2px solid #ffbd13;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -264,7 +264,7 @@
 	-moz-transition: all 0.2s ease-in-out;
 }
 .shift-card-slider ul.slick-dots li button:hover,
-.shift-card-slider ul.slick-dots li.slick-active button{ background: #0d829b; border-color: #0d829b; }
+.shift-card-slider ul.slick-dots li.slick-active button{ background: #ffbd13; border-color: #ffbd13; }
 
 /* SLICK ARROWS */
 .shift-card-slider .slick-prev:before,
