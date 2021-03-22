@@ -309,6 +309,60 @@
   right: -80px;
 }
 
+/* SOW SHIFT LOGO SLIDER */
+.shift-logos-wrapper .slick-prev:before,
+.shift-logos-wrapper .slick-next:before{
+	content:"";
+	width: 162px;
+	height: 27px;
+	display: inline-block;
+  background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.shift-logos-wrapper .slick-next:before{
+  background-image: url('<?php _e($img_path.'/long-right-arrow.png');?>');
+}
+
+.shift-logos-wrapper button.slick-next{
+	position: absolute;
+	display: inline-block;
+	right: 20px;
+	margin-top: 50px;
+	cursor: pointer;
+	outline: none;
+	opacity: 0;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	z-index: 12;
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
+.shift-logos-slider.loaded button.slick-next { opacity: 1; }
+.shift-logos-wrapper > button.slick-next{
+  right: -80px;
+}
+
+.shift-logos-slider .slide-inner{
+	background-color: #ffffff;
+	height: 120px;
+	max-width: 450px;
+	width: 100%;
+	border-radius: 15px;
+	padding: 20px 30px;
+}
+
+.shift-logos-slider .slide-inner img{
+  height: 100%;
+  object-fit: scale-down;
+}
+
+/* FOR SHOWING PARTIAL SLIDE */
+.shift-logos-slider .slick-list{ padding-right: 70px; }
+
 
 /* MEDIA QUERIES */
 @media( min-width: 769px ){

@@ -1,4 +1,4 @@
-jQuery.fn.shiftSlider = function(options){
+jQuery.fn.shiftSlider = function(options, sliderFn = ''){
 
 	return this.each(function(){
 
@@ -30,12 +30,12 @@ jQuery.fn.shiftSlider = function(options){
 
 		$el.slick(settings);
 
+
 		$el.addClass( 'loaded' );
 
 	});
 
 }
-
 
 jQuery(document).ready(function(){
 
@@ -45,5 +45,24 @@ jQuery(document).ready(function(){
 		nextArrow     	: '<button type="button" class="slick-next slick-nav"></button>',
 		prevArrow     	: '<button type="button" class="slick-prev slick-nav"></button>'
 	});
+
+	jQuery('[data-behaviour~=shift-logos-slick]').shiftSlider({
+		arrows					: true,
+		nextArrow     	: '<button type="button" class="slick-next slick-nav"></button>',
+		responsive			: [
+			{
+				breakpoint: 1169,
+				settings: { slidesToShow: 3 }
+			},
+			{
+				breakpoint: 992,
+				settings: { slidesToShow: 2 }
+			},
+			{
+				breakpoint: 520,
+				settings: { slidesToShow: 1 }
+			}
+		]
+	})
 
 });
