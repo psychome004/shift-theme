@@ -320,9 +320,6 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.shift-logos-wrapper .slick-next:before{
-  background-image: url('<?php _e($img_path.'/long-right-arrow.png');?>');
-}
 
 .shift-logos-wrapper button.slick-next{
 	position: absolute;
@@ -362,6 +359,105 @@
 
 /* FOR SHOWING PARTIAL SLIDE */
 .shift-logos-slider .slick-list{ padding-right: 70px; }
+
+/* SOW HERO VIDEO */
+.shift-hero-video{ position: relative; overflow: visible; }
+.shift-hero-video .shift-hero-video-inner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.shift-hero-video .img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+
+}
+.shift-hero-video .img-wrapper img {
+  width: 100vw;
+  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shift-hero-video .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.shift-hero-video .btn-play{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.shift-hero-video .btn-play .play-icon{
+  display: inline-block;
+  width: 0;
+  height: 60px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 30px 0 30px 60px;
+  box-sizing: border-box;
+  background: transparent;
+  border-color: transparent transparent transparent #ffffff;
+  transition: 100ms all ease;
+}
+
+.shift-hero-video .video-text{
+  display: block;
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  bottom: 150px;
+}
+
+.shift-hero-video .video-text-inner{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shift-hero-video .video-text-inner::before{
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.shift-hero-video .arrow-down{
+  width: 38px;
+  height: 150px;
+  position: absolute;
+  bottom: -100px;
+  left: 4%;
+  transform: translateX(-4%);
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
 /* MEDIA QUERIES */

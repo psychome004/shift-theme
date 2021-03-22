@@ -22,3 +22,9 @@
 		</section>
 	</div>
 </div>
+
+<style>
+.shift-logos-wrapper .slick-next:before{
+	background-image: url('<?php _e($img_path.'/long-right-arrow.png');?>');
+}
+</style>
