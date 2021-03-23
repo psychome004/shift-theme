@@ -353,6 +353,8 @@
 .shift-logos-slider .slide-inner img{
   height: 100%;
   object-fit: scale-down;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /* FOR SHOWING PARTIAL SLIDE */
@@ -549,7 +551,7 @@
   position: absolute;
   top: 50%;
   right: -20%;
-  height: 3px;
+  height: 4px;
   width: 50%;
   background-color: #ffbd13;
 }
@@ -620,6 +622,105 @@
   transition: opacity .3s;
 }
 .shift-cta-wrapper .cta-btn:hover{ opacity: 0.8; }
+
+/* SOW SHIFT POST */
+.shift-post-wrapper{
+	width: 100%;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.shift-post-wrapper .post-item{
+	position: relative;
+	display: flex;
+	padding-bottom: 0;
+	vertical-align: top;
+	width: 100%;
+}
+
+.shift-post-wrapper .post-title{
+	display: flex;
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	width: 100%;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.shift-post-wrapper .post-title .title-left{
+	position: relative;
+	width: 40%;
+}
+
+.shift-post-wrapper .post-title .title-right{
+	width: 50%;
+}
+
+.shift-post-wrapper .post-title .title-left,
+.shift-post-wrapper .post-title .title-right{
+	text-align: center;
+}
+
+.shift-post-wrapper .post-title .title-left::before{
+	content: "";
+  position: absolute;
+  top: 50%;
+  right: -42%;
+  height: 4px;
+  width: 75%;
+  background-color: #ffbd13;
+}
+
+.shift-post-wrapper .post-bg-wrapper{
+	width: 40%;
+	height: 85vh;
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px;
+	background-color: #eeeeee;
+}
+
+.shift-post-wrapper .post-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shift-post-wrapper .post-bg img {
+	width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shift-post-wrapper .post-bg-wrapper .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,176,175,0.3);
+}
+
+.shift-post-wrapper .post-content-wrapper{
+	width: 50%;
+	padding-top: 180px;
+	padding-left: 50px;
+	padding-right: 5%;
+}
+
+.shift-post-wrapper .post-content-wrapper .post-content{
+	 margin-bottom: 20px;
+	 line-height: 1.7;
+	 font-size: 18px;
+}
 
 
 /* MEDIA QUERIES */
