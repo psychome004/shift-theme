@@ -178,10 +178,11 @@
 /* SOW SHIFT CARD SLIDER */
 .card-slider-wrapper{
 	width: 100%;
-	max-width:1170px;
+  max-width: 93%;
   overflow: hidden;
   margin: 0 auto;
   padding: 36px 100px 36px;
+  box-sizing: border-box;
 }
 .shift-card-slider{
   margin: 30px -15 50px;
@@ -223,6 +224,8 @@
 
 .shift-card-slider .card-content{
   text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 /* SLICK DOTS */
@@ -308,6 +311,7 @@
 }
 
 /* SOW SHIFT LOGO SLIDER */
+.shift-logos-wrapper{ width: 100%; max-width: 93%; margin: 0 auto; }
 .shift-logos-wrapper .slick-prev:before,
 .shift-logos-wrapper .slick-next:before{
 	content:"";
@@ -322,7 +326,7 @@
 .shift-logos-wrapper button.slick-next{
 	position: absolute;
 	display: inline-block;
-	right: 20px;
+	right: 1px;
 	margin-top: 50px;
 	cursor: pointer;
 	outline: none;
@@ -613,7 +617,7 @@
   font-weight: bold;
   background-color: #00B0AF;
   background-image: linear-gradient(to right, #A6DCE2 1%,#00B0AF,#167C9B);
-  padding: 12px 20px;
+  padding: 18px 36px;
   border-radius: 4px;
   letter-spacing: 1px;
   text-align: center;
@@ -770,6 +774,11 @@
 }
 
 @media(max-width: 768px){
+
+  .sticky-transparent-header .navbar-nav{
+    background-color: #ffffff;
+  }
+
 
   .header5 .navbar-brand{
   	padding: 0 9px;

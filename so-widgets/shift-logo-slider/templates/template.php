@@ -10,7 +10,7 @@
 
 <!-- Logos -->
 <div class="fullwidth">
-	<div class="shift-logos-wrapper" style="max-width:1170px;">
+	<div class="shift-logos-wrapper">
 		<section data-behaviour="shift-logos-slick" data-items="<?php _e( $instance['show_slides'] );?>" class="shift-logos-slider">
 			<?php foreach( $instance['slides'] as $slide ):?>
 				<div class="slide">
