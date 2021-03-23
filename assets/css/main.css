@@ -722,6 +722,7 @@
   .logo-normal .desktop-logo{
     margin-left: 15px;
   }
+  .header5 .navbar-nav{ margin: 0 !important; }
   #bs-example-navbar-collapse-1,
   .navbar.header5 > .container-fluid{
     padding-right: 0px;
