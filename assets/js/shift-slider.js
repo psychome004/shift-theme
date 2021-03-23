@@ -39,6 +39,28 @@ jQuery.fn.shiftSlider = function(options, sliderFn = ''){
 
 jQuery(document).ready(function(){
 
+	/* STICKY HEADER */
+	var $stickyNavbar = jQuery(".sticky-transparent-header");
+	var navbarOffset = $stickyNavbar.offset().top;
+
+	function shiftHeader(){
+		if(jQuery(window).scrollTop() >= navbarOffset) {
+      $stickyNavbar.addClass("navbar-fixed-top").css({
+				backgroundColor: '#ffffff',
+				position			 : 'fixed'
+			});
+    } else {
+      $stickyNavbar.removeClass("navbar-fixed-top").css({
+				backgroundColor: 'transparent',
+				position			 : 'absolute'
+			});
+    }
+
+	}
+
+	jQuery(window).on("scroll", function(){ shiftHeader(); });
+
+	/* SLIDER */
 	jQuery('[data-behaviour~=cards-slick]').shiftSlider({
 		arrows					: true,
 		dots						: true,
@@ -63,6 +85,9 @@ jQuery(document).ready(function(){
 				settings: { slidesToShow: 1 }
 			}
 		]
-	})
+	});
+
+	// EXECUTE ON LOAD - DEFAULT
+	shiftHeader();
 
 });
