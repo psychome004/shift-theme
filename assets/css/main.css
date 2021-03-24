@@ -411,15 +411,12 @@
 
 .shift-hero-video .btn-play .play-icon{
   display: inline-block;
-  width: 0;
-  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 54px;
+  height: 54px;
   cursor: pointer;
-  border-style: solid;
-  border-width: 30px 0 30px 60px;
-  box-sizing: border-box;
-  background: transparent;
-  border-color: transparent transparent transparent #ffffff;
-  transition: 100ms all ease;
 }
 
 .shift-hero-video .video-text{

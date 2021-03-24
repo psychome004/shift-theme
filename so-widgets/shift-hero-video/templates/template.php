@@ -31,4 +31,7 @@
   .shift-hero-video .arrow-down{
   	background-image: url('<?php _e($img_path.'/arrow-down.png');?>');
   }
+  .shift-hero-video .play-icon{
+  	background-image: url('<?php _e($img_path.'/play-btn.svg');?>');
+  }
 </style>
