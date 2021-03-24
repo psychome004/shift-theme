@@ -40,15 +40,6 @@ class SHIFT_HERO_IMAGE extends SiteOrigin_Widget {
 					'label' 		=> __( 'Target Id', 'siteorigin-widgets' ),
 					'default' 	=> '',
 				),
-				'img_overlay' => array(
-					'type' 				=> 'slider',
-					'label' 			=> __( 'Image Overlay', 'siteorigin-widgets' ),
-					'default' 		=> 4,
-					'min' 				=> 0,
-					'max'					=> 10,
-					'integer' 		=> true,
-					'description'	=>	__( 'Default value 4. Max value 10', 'siteorigin-widgets' ),
-				),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/shift-hero-img"
