@@ -29,4 +29,9 @@
 	.shift-cta-wrapper .cta-item:nth-child(1) .cta-content-wrapper::after{
 		background-image: url(<?php _e($img_path.'/cta-one-texture.png');?>);
 	}
+
+	.shift-cta-wrapper .cta-item:nth-child(2) .cta-content-wrapper::after{
+		background-image: url(<?php _e($img_path.'/cta-two-texture.png');?>);
+	}
+
 </style>
