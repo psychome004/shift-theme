@@ -59,7 +59,7 @@
 /* Navbar links */
 .navbar-default .navbar-nav > li > a,
 .navbar .dropdown-menu > li > a{
-  font-weight: bold !important;
+  font-weight: 400;
   color: #748093;
 }
 .navbar-default .navbar-nav > li > a:hover,
@@ -200,6 +200,7 @@
 
 .shift-card-slider .card{
   padding: 40px 30px;
+  /* padding: 33px 28px 24px 29px; */
   color: #ffffff;
   background-color: #00B0AF;
   background-image: linear-gradient(to bottom right, #A6DCE2,#00B0AF,#167C9B);
@@ -209,8 +210,9 @@
 }
 
 .shift-card-slider .card-header{
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
+
 .shift-card-slider .card-header img{
   display: block;
   margin: 0 auto;
@@ -225,7 +227,7 @@
 .shift-card-slider .card-content{
   text-align: center;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 27px;
 }
 
 /* SLICK DOTS */
@@ -527,8 +529,8 @@
   top: 80px;
   z-index: 1;
   width: 100%;
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 46px;
+  font-weight: 700;
 }
 
 .shift-cta-wrapper .cta-title .title-left,
@@ -600,20 +602,21 @@
 
 .shift-cta-wrapper .cta-content-wrapper .cta-content,
 .shift-post-wrapper .post-content-wrapper .post-content{
-   margin-bottom: 20px;
-   line-height: 1.7;
    font-size: 18px;
+   line-height: 27px;
+   margin-bottom: 20px;
 }
 
 .shift-cta-wrapper .cta-item .cta-btn{
   display: inline-block;
   color: #ffffff;
   font-style: italic;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   background-color: #00B0AF;
   background-image: linear-gradient(to right, #A6DCE2 1%,#00B0AF,#167C9B);
-  padding: 18px 36px;
+  box-sizing: border-box;
+  padding: 15px 36px;
   border-radius: 4px;
   letter-spacing: 1px;
   text-align: center;
