@@ -311,7 +311,7 @@
 }
 
 /* SOW SHIFT LOGO SLIDER */
-.shift-logos-wrapper{ width: 100%; max-width: 93%; margin: 0 auto; margin-right: 1px; }
+.shift-logos-wrapper{ width: 100%; max-width: 90%; margin: 0 auto; }
 .shift-logos-wrapper .slick-prev:before,
 .shift-logos-wrapper .slick-next:before{
 	content:"";
@@ -362,7 +362,7 @@
 }
 
 /* FOR SHOWING PARTIAL SLIDE */
-.shift-logos-slider .slick-list{ padding-right: 70px; }
+.shift-logos-slider .slick-list{ margin-left: -20px; padding-right: 70px; }
 
 /* SOW HERO VIDEO */
 .shift-hero-video{ position: relative; overflow: visible; }
