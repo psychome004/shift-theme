@@ -619,8 +619,10 @@
 
 .shift-cta-wrapper .cta-content-wrapper .cta-content,
 .shift-post-wrapper .post-content-wrapper .post-content{
+   color: #2e3d59;
    font-size: 18px;
    line-height: 27px;
+   letter-spacing: 0.02em;
    margin-bottom: 20px;
 }
 
@@ -642,6 +644,33 @@
   transition: opacity .3s;
 }
 .shift-cta-wrapper .cta-btn:hover{ opacity: 0.8; }
+
+.shift-cta-wrapper{ padding-top: 50px; }
+.shift-cta-wrapper::before,
+.shift-cta-wrapper .cta-item:nth-child(1) .cta-content-wrapper::after{
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 70%;
+  height: 35px;
+}
+.shift-cta-wrapper::before{
+  display: block;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+.shift-cta-wrapper .cta-item:nth-child(1) { position: relative; }
+.shift-cta-wrapper .cta-item:nth-child(1) .cta-content-wrapper::after{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  z-index: -1;
+  width: 70%;
+  height: 35px;
+}
+
 
 /* SOW SHIFT POST */
 .shift-post-wrapper{

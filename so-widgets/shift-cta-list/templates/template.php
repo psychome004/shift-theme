@@ -1,4 +1,7 @@
 <!-- SHIFT CTA LIST -->
+<?php
+	$img_path = get_stylesheet_directory_uri().'/assets/images/';
+?>
 <div class="shift-cta-wrapper">
 	<?php foreach( $instance['ctas'] as $cta ): $image = wp_get_attachment_url( $cta['image'] );?>
 		<div class="cta-item">
@@ -20,3 +23,10 @@
 		</div>
 	<?php endforeach;?>
 </div><!-- SHIFT CTA LIST -->
+
+<style>
+	.shift-cta-wrapper::before,
+	.shift-cta-wrapper .cta-item:nth-child(1) .cta-content-wrapper::after{
+		background-image: url(<?php _e($img_path.'/cta-one-texture.png');?>);
+	}
+</style>
