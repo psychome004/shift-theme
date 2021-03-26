@@ -815,6 +815,8 @@
   .shift-hero-img .img-wrapper img{ max-width: 300px; }
   .shift-hero-img .img-wrapper .bg-left, .shift-hero-img .img-wrapper .bg-right{ width: 100%; }
 
+  .shift-hero-video .shift-hero-video-inner{ height: 407px; }
+  .shift-hero-video .video-text{ bottom: 50px; }
 }
 
 @media(max-width:480px){
@@ -823,5 +825,78 @@
 	.card-slider-wrapper{ padding: 36px 30px 36px; }
   .shift-card-slider > button.slick-prev{ left: -28px; }
   .shift-card-slider > button.slick-next{ right: -28px; }
+
+}
+
+@media(max-width: 1170px){
+  .cta-title .title-left, .cta-title .title-right,
+  .post-title .title-left, .post-title .title-right{
+    color: #2e3d59 !important;
+  }
+  .shift-cta-wrapper .cta-title, .shift-post-wrapper .post-title{
+    position: relative;
+    top: 0;
+  }
+  .shift-cta-wrapper .cta-item,
+  .shift-post-wrapper .post-item{
+    display: block;
+    margin-bottom: 50px;
+  }
+  .shift-cta-wrapper .cta-bg,
+  .shift-post-wrapper .post-bg-wrapper{
+    display: none;
+  }
+  .shift-cta-wrapper .cta-content-wrapper,
+  .shift-post-wrapper .post-content-wrapper{
+    width: 100%;
+    padding: 40px 0 5% !important;
+    text-align: center;
+  }
+  .shift-cta-wrapper .cta-title, .shift-post-wrapper .post-title{
+    flex-direction: column;
+    font-size: 36px;
+    line-height: 32px;
+    display: block;
+  }
+  .shift-post-wrapper .post-title .title-left, .shift-post-wrapper .post-title .title-right{ width: 100%; }
+  .shift-cta-wrapper .cta-title .title-left,
+  .shift-post-wrapper .post-title .title-left{
+    padding-bottom: 10px;
+  }
+  .shift-cta-wrapper .cta-title .title-right,
+  .shift-post-wrapper .post-title .title-right{
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+  .shift-cta-wrapper .cta-title .title-left::before,
+  .shift-post-wrapper .post-title .title-left::before {
+    top: 100%;
+    left: 50%;
+    right: unset;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 4px;
+  }
+
+  .shift-cta-wrapper .cta-item .cta-btn{
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .shift-cta-wrapper::before{
+    margin: 20px auto;
+    right: 0;
+  }
+
+  .shift-cta-wrapper .cta-item:nth-child(2) .cta-content-wrapper::after{
+    right: -5% !important;
+  }
+
+  .shift-cta-wrapper .cta-item:nth-child(1) .cta-content-wrapper::after{
+    bottom: -6%;
+    left: 0;
+    margin: 0 auto;
+  }
 
 }
