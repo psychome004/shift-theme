@@ -740,7 +740,8 @@
 /* ORBIT 3 GRID */
 .shift-grid-3 .post-wrapper{
   padding: 50px 25px;
-  background-color: #ffffff;
+  background-color: #a6dce2;
+  height: 100%;
 }
 .shift-grid-3 .post-item:nth-child(even) .post-wrapper{
   background-color: #efefef;
@@ -748,20 +749,18 @@
 .shift-grid-3 .post-inner{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  color: #2e3d59;
 }
 .shift-grid-3 .title{
-  color: #737082;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 3px;
-  text-align: center;
   text-transform: uppercase;
   margin: 0 0 20px;
 }
 
 .shift-grid-3 .content{
-  color: #6d6e71;
   font-size: 17px;
 }
 
@@ -778,8 +777,8 @@
   letter-spacing: 2px;
   padding: 12px 24px;
   margin-top: 20px;
-  background-color: #737082;
-  border: 3px solid #737082;
+  background-color: #2e3d59;
+  border: 3px solid #2e3d59;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: all .3s;
@@ -788,7 +787,7 @@
 }
 
 .shift-grid-3 .post-btn:hover{
-  color: #737082;
+  color: #2e3d59;
   background-color: #ffffff;
 }
 
