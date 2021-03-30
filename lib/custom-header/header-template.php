@@ -1,6 +1,8 @@
-<div class="container-fluid">
-  <?php if( is_active_sidebar('shift-header-section') ){ dynamic_sidebar('shift-header-section'); } ?>
-</div>
+<?php if( is_front_page() ) :?>
+  <div class="container-fluid">
+    <?php if( is_active_sidebar('shift-header-section') ){ dynamic_sidebar('shift-header-section'); } ?>
+  </div>
+<?php endif; ?>
 <div id="sticky-header-wrapper">
   <div class="sticky-transparent-header">
     <nav class="navbar navbar-default header5">
