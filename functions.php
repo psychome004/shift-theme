@@ -34,3 +34,9 @@ add_filter('wp_nav_menu_items', function( $items, $args ){
   }
   return $items;
 }, 10, 2);
+
+
+/* EXCERPT MORE */
+add_filter( 'excerpt_more', function( $more ){
+	return '&hellip;';
+});
