@@ -762,8 +762,12 @@
   font-size: 24px;
   color: #ffffff;
   margin: 0;
-
 }
+.articles-users .user-meta-sm{ display: none; text-align:center; }
+.articles-users .user-meta-sm:not(:last-child){ margin-bottom: 40px; }
+.articles-users .user-meta-sm .name{ color:#167c9b; font-size:18px; }
+.articles-users .user-meta-sm .bio{ color: #2e3d59; }
+
 .shift-user-body .overlay, .shift-user-body .overlay .name{ visibility: hidden; }
 #shift-user-modal .shift-user-body .user-thumbnail-bg{ align-self: start; width: 100%; max-width: 180px; min-height: 180px; background-repeat:no-repeat; background-size: cover; background-position: inherit; }
 #shift-user-modal .shift-user-body .user-meta .name{ font-weight: 500; font-size: 16px; line-height: 24px; color: #000000; }
@@ -905,7 +909,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     margin-right: 10vw;
     margin-bottom: 0;
   }
-  .articles-users .shift-user-card:nth-child(2n) {
+  .articles-users .shift-user-card:nth-child(4n+3) {
     margin: -9vw -5vw 0 -15vw;
   }
   #shift-user-modal .shift-user-body{ display: grid; grid-template-columns: 200px 1fr; }
@@ -964,6 +968,30 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 
   .shift-hero-video .shift-hero-video-inner{ height: 407px; }
   .shift-hero-video .video-text{ bottom: 50px; }
+
+  /* SOW Shift USER POPUP */
+  .articles-users .user-meta-sm{ display: block; }
+  .shift-user-body .overlay{ display: none; }
+  .articles-users .shift-user-card {
+    width: 36vw;
+    height: 30vw;
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+    -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (max-width: 500px){
+
+  .articles-users .shift-user-card {
+    width: 60%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 @media(max-width:480px){

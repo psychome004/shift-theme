@@ -26,9 +26,9 @@ jQuery.fn.shift_user_popup = function() {
               <div class="shift-user-body">
                 <div class="user-thumbnail-bg" style="background-image:url(${imageUrl});"></div>
                 <div class="user-meta">
-                  <h5 class="name">${name}</h5>
+                  <h5 class="name">${( name ? name : '' )}</h5>
                   <div class="separator"></div>
-                  <div class="bio">${bio}</div>
+                  <div class="bio">${( bio ? bio : '' )}</div>
                 </div>
               </div>
             </div><!-- Modal Body -->
@@ -54,7 +54,7 @@ jQuery.fn.shift_user_popup = function() {
 
 jQuery(document).ready(function () {
 
-	if( jQuery(window).width() >= 768 ) {
+	if( jQuery(window).width() > 768 ) {
 		jQuery('a[data-behaviour~=shift-user-popup]').shift_user_popup();
 	}
 
