@@ -29,8 +29,8 @@ add_action('siteorigin_widgets_widget_folders', function( $folders ){
 * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
 */
 add_filter('wp_nav_menu_items', function( $items, $args ){
-  $social_icons  ='<a target="_blank" href=" https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
-  $social_icons .='<a target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
+  $social_icons  ='<a target="_blank" href="https://www.facebook.com/ShiftFreedom"><i class="fa fa-facebook"></i></a>';
+  $social_icons .='<a target="_blank" href="https://www.instagram.com/shiftfreedomnow/"><i class="fa fa-instagram"></i></a>';
 
   if( $args->theme_location == 'primary' ){
       $items .= '<li class="menu-item social-icons-wrapper"><div class="social-icons">'.$social_icons.'</div></li>';
