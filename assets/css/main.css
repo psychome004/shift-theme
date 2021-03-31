@@ -1034,10 +1034,10 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   .articles-users .user-meta-sm{ display: block; }
   .shift-user-body .overlay{ display: none; }
   .articles-users .shift-user-card {
-    width: 36vw;
-    height: 30vw;
-    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-    -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+    width: 50%;
+    height: auto;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     margin-left: auto;
     margin-right: auto;
   }
@@ -1047,8 +1047,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 @media (max-width: 500px){
 
   .articles-users .shift-user-card {
-    width: 60%;
-    height: 75%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
