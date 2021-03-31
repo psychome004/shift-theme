@@ -1,10 +1,16 @@
-<?php if( is_front_page() ) :?>
+<?php
+
+  $shift_header_class = ' navbar-fixed-top';
+
+  if( is_front_page() ) :
+    $shift_header_class = '';
+?>
   <div class="container-fluid">
     <?php if( is_active_sidebar('shift-header-section') ){ dynamic_sidebar('shift-header-section'); } ?>
   </div>
 <?php endif; ?>
 <div id="sticky-header-wrapper">
-  <div class="sticky-transparent-header">
+  <div class="sticky-transparent-header<?php _e( $shift_header_class ); ?>">
     <nav class="navbar navbar-default header5">
       <div class="container-fluid"><!-- .container-->
         <!-- Brand and toggle get grouped for better mobile display -->
