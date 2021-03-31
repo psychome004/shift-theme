@@ -796,6 +796,34 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 #shift-user-modal .shift-user-body .user-meta .bio{ font-size: 16px; line-height: 18px; color: #2e3d59; }
 /* USER MODAL */
 
+/* SOW SHIFT HEADLINE */
+.shift-headline .headline-inner{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 46px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+
+.shift-headline .title-left,
+.shift-headline .title-right{
+	position: relative;
+	background: #ffffff;
+}
+.shift-headline .title-left{ padding-right: 20px; }
+.shift-headline .title-right{ padding-left: 20px; }
+
+.shift-headline .headline-inner::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background-color: #ffbd13;
+}
 
 /* ORBIT 3 GRID */
 .shift-grid-3 .post-wrapper{
@@ -927,6 +955,39 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     padding-right: 0px;
     padding-left: 0px;
   }
+
+}
+
+@media(max-width:960px){
+	/* SOW SHIFT HEADLINE */
+	.shift-headline .headline-inner{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 36px;
+    line-height: 1.2;
+		text-align: center;
+	}
+
+	.shift-headline .headline-inner::before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 4px;
+	}
+
+	.shift-headline .title-left,
+	.shift-headline .title-right{
+		padding: 0;
+	}
+	.shift-headline .title-left{
+		margin-bottom: 50px;
+		padding-bottom: 20px;
+	}
+	.shift-headline .title-right{
+		margin-top: 50px;
+		padding-top: 20px;
+	}
 
 }
 
