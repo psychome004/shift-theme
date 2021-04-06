@@ -638,6 +638,8 @@
 
 .shift-cta-wrapper .cta-item .cta-btn{
   display: inline-block;
+  position: relative;
+  z-index: 1;
   color: #ffffff;
   font-style: italic;
   font-size: 18px;
@@ -1148,8 +1150,6 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   }
 
   .shift-cta-wrapper .cta-item .cta-btn{
-    position: relative;
-    z-index: 1;
     margin-top: 20px;
   }
 
