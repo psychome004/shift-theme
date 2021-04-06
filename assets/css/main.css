@@ -59,9 +59,10 @@
 /* Navbar links */
 .navbar-default .navbar-nav > li > a,
 .navbar .dropdown-menu > li > a{
-  font-weight: 400;
-  color: #748093;
+  font-weight: bold;
+  color: #00b0af;
 }
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #2e3d59;
@@ -898,6 +899,30 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 		float: none;
 		display: inline-block;
 	}
+
+  .navbar-default .navbar-nav > li:not(:last-child){ margin-right: 25px; }
+  .navbar-default .navbar-nav > li > a{
+    position: relative;
+    padding: 26.5px 0;
+  }
+
+  .navbar-default .navbar-nav > li > a::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    height: 2px;
+    width: 0;
+    background: #2e3d59;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+  }
+  .navbar-default .navbar-nav > li > a:hover::before{
+    left: 0;
+    width: 100%;
+  }
+
   /* Social Icons */
   .header5 .nav > li.social-icons-wrapper{
     float: right !important;
