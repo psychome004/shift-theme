@@ -489,11 +489,13 @@
 .shift-hero-img .img-wrapper img {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: -50%;
   width: 100%;
   max-width: 45vw;
   z-index: 1000;
   transform: translate(-50%, -50%);
+  -webkit-animation: slideInRight 1.5s forwards;
+  animation: slideInRight 1.5s forwards;
 }
 
 .shift-hero-img .img-wrapper .bg-left{
@@ -504,13 +506,15 @@
 }
 .shift-hero-img .img-wrapper .bg-right{
   position: absolute;
-  right: 0;
+  right: -50%;
   z-index: 999;
   width: 42%;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
+  -webkit-animation: slideInLeft 2s forwards;
+  animation: slideInLeft 2s forwards;
 }
 
 .shift-hero-img .arrow-wrapper{
@@ -1162,4 +1166,28 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     margin: 40px auto 0;
   }
 
+}
+
+/* ANIMATIONS */
+
+/*=== SLIDE IN RIGHT ===*/
+@-webkit-keyframes slideInRight {
+  0%{ opacity: 0; width: 0; }
+  100% { left: 50%; opacity: 1; width: 100%; }
+}
+
+@keyframes slideInRight {
+  0%{ opacity: 0; }
+  100% { left: 50%; opacity: 1; }
+}
+
+/*=== SLIDE IN LEFT ===*/
+@-webkit-keyframes slideInLeft {
+  0%{ opacity: 0; }
+  100% { right: 0%; opacity: 0.5; }
+}
+
+@keyframes slideInLeft {
+  0%{ opacity: 0; }
+  100% { right: 0%; opacity: 0.5; }
 }
