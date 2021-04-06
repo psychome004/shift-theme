@@ -420,9 +420,9 @@
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
-  width: 54px;
-  height: 54px;
+  background-size: cover;
+  width: 70px;
+  height: 70px;
   cursor: pointer;
 }
 
@@ -970,6 +970,14 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     margin: -9vw -5vw 0 -15vw;
   }
   #shift-user-modal .shift-user-body{ display: grid; grid-template-columns: 200px 1fr; }
+
+  /* SOW SHIFT HERO VIDEO  */
+  .shift-hero-video .btn-play .play-icon{
+    transition: all 0.3s;
+  }
+  .shift-hero-video .btn-play .play-icon:hover{
+    transform:  scale(1.2);
+  }
 
 }
 
