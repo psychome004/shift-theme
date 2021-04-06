@@ -5,9 +5,7 @@
   if( is_front_page() ) :
     $shift_header_class = '';
 ?>
-  <div class="container-fluid">
-    <?php if( is_active_sidebar('shift-header-section') ){ dynamic_sidebar('shift-header-section'); } ?>
-  </div>
+<?php if( is_active_sidebar('shift-header-section') ){ dynamic_sidebar('shift-header-section'); } ?>
 <?php endif; ?>
 <div id="sticky-header-wrapper">
   <div class="sticky-transparent-header<?php _e( $shift_header_class ); ?>">
