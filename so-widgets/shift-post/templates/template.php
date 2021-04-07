@@ -2,7 +2,7 @@
 <div class="shift-post-wrapper">
 	<?php $image = wp_get_attachment_url( $instance['image'] );?>
 	<div class="post-item">
-		<div class="post-title">
+		<div class="post-title" data-aos="fade-down">
 			<div class="title-left" style="color: <?php _e( $instance['tl_color'] );?>;">
 				<?php _e( $instance['title_left'] );?>
 			</div>

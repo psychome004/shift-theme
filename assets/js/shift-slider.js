@@ -87,7 +87,14 @@ jQuery(document).ready(function(){
 		]
 	});
 
+	// INITIALIZE AOS ANIMATION
+	AOS.init({
+    duration: 1000,
+    once: false,
+  });
+
 	// EXECUTE ON LOAD - DEFAULT
 	shiftHeader();
+
 
 });

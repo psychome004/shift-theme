@@ -5,7 +5,7 @@
 <div class="shift-cta-wrapper">
 	<?php foreach( $instance['ctas'] as $cta ): $image = wp_get_attachment_url( $cta['image'] );?>
 		<div class="cta-item">
-			<div class="cta-title">
+			<div class="cta-title" data-aos="fade-down">
 				<div class="title-left" style="color: <?php _e($cta['tl_color']);?>;">
 					<?php _e( $cta['title_left'] );?>
 				</div>
