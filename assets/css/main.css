@@ -63,6 +63,7 @@
   color: #00b0af;
 }
 
+.navbar-nav > li.dropdown:hover > a,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #2e3d59;
@@ -924,6 +925,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
   }
+  .navbar-nav > li.dropdown:hover > a::before,
   .navbar-default .navbar-nav > li > a:hover::before{
     left: 0;
     width: 100%;
