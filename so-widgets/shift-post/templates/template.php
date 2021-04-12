@@ -14,7 +14,6 @@
 			<div class="post-bg">
 				<img src="<?php _e( $image );?>" alt="Background image">
 			</div>
-			<div class="overlay"></div>
 		</div>
 		<div class="post-content-wrapper">
 			<div class="post-content"><?php _e( $instance['content'] );?></div>

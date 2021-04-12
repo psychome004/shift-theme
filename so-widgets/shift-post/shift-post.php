@@ -39,23 +39,23 @@ class Shift_Post_Card extends SiteOrigin_Widget {
 					'type' 	=> 'text',
 					'label' => __( 'Tile Left', 'siteorigin-widgets'),
 				),
+				'title_right' => array(
+					'type' 	=> 'text',
+					'label' => __( 'Title Right', 'siteorigin-widgets'),
+				),
+				'content' => array(
+					'type' 	=> 'textarea',
+					'label' => __( 'Content', 'siteorigin-widgets'),
+				),
 				'tl_color' => array(
 					'type' 		=> 'color',
 					'label' 	=> __( 'Tile Left Color', 'siteorigin-widgets' ),
 					'default' 	=> '#000000'
 				),
-				'title_right' => array(
-					'type' 	=> 'text',
-					'label' => __( 'Title Right', 'siteorigin-widgets'),
-				),
 				'tr_color' => array(
 					'type' 		=> 'color',
 					'label' 	=> __( 'Tile Right Color', 'siteorigin-widgets' ),
 					'default' 	=> '#000000'
-				),
-				'content' => array(
-					'type' 	=> 'textarea',
-					'label' => __( 'Content', 'siteorigin-widgets'),
 				),
 			),
 			//The $base_folder path string.

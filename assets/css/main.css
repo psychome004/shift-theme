@@ -598,8 +598,7 @@
   -o-background-size: cover;
 }
 
-.shift-cta-wrapper .cta-bg .overlay,
-.shift-post-wrapper .post-bg-wrapper .overlay{
+.shift-cta-wrapper .cta-bg .overlay{
   position: absolute;
   top: 0;
   left: 0;
