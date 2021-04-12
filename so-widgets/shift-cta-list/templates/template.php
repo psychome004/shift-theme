@@ -13,9 +13,7 @@
 					<?php _e( $cta['title_right'] );?>
 				</div>
 			</div>
-			<div class="cta-bg" style="background-image: url(<?php _e( $image );?>);">
-				<div class="overlay"></div>
-			</div>
+			<div class="cta-bg" style="background-image: url(<?php _e( $image );?>);"></div>
 			<div class="cta-content-wrapper">
 				<div class="cta-content"><?php _e( $cta['content'] );?></div>
 				<a href="<?php _e( $cta['btn_url'] );?>" class="cta-btn"><?php _e( $cta['btn_text'] );?></a>

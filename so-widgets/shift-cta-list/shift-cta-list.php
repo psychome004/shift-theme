@@ -30,7 +30,6 @@ class Shift_CTA_List extends SiteOrigin_Widget {
 				'ctas' => array(
 					'type' 	=> 'repeater',
 					'label' => __( 'CTA Section' , 'siteorigin-widgets' ),
-					// 'item_name'  => __( 'CTA Repeater', 'siteorigin-widgets' ),
 					'item_label' => array(
 						'selector' => "[id*='title_left']",
 						'update_event' => 'change',
@@ -47,21 +46,11 @@ class Shift_CTA_List extends SiteOrigin_Widget {
 						),
 						'title_left' => array(
 							'type' 	=> 'text',
-							'label' => __( 'Tile Left', 'siteorigin-widgets'),
-						),
-						'tl_color' => array(
-							'type' 		=> 'color',
-							'label' 	=> __( 'Tile Left Color', 'siteorigin-widgets' ),
-							'default' 	=> '#000000'
+							'label' => __( 'Title Left', 'siteorigin-widgets'),
 						),
 						'title_right' => array(
 							'type' 	=> 'text',
 							'label' => __( 'Title Right', 'siteorigin-widgets'),
-						),
-						'tr_color' => array(
-							'type' 		=> 'color',
-							'label' 	=> __( 'Tile Right Color', 'siteorigin-widgets' ),
-							'default' 	=> '#000000'
 						),
 						'content' => array(
 							'type' 	=> 'textarea',
@@ -74,6 +63,16 @@ class Shift_CTA_List extends SiteOrigin_Widget {
 						'btn_url' => array(
 							'type' 		=> 'link',
 							'label' => __( 'Button URL', 'siteorigin-widgets'),
+						),
+						'tl_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Tile Left Color', 'siteorigin-widgets' ),
+							'default' 	=> '#000000'
+						),
+						'tr_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Tile Right Color', 'siteorigin-widgets' ),
+							'default' 	=> '#000000'
 						),
 					)
 				)
