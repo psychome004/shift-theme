@@ -162,7 +162,8 @@
   display: inline-block;
   width: 32px;
   height: 32px;
-  color: #2e3d59;
+  color: #ffffff;
+  background: #2e3d59;
   text-align: center;
   line-height: 30px;
   border: 2px solid #2e3d59;
