@@ -1,8 +1,15 @@
 <?php
  global $youtube;
- $img_path = get_stylesheet_directory_uri().'/assets/images/';
- $video_id = $youtube->get_video_id( $instance['video_id'] );
- $overlay = !empty( $instance['video_overlay'] ) ? $instance['video_overlay']/10 : '0.4';
+ $img_path     = get_stylesheet_directory_uri().'/assets/images/';
+ $video_id     = !empty( $instance['video_id'] ) ? $youtube->get_video_id( $instance['video_id'] ) : '';
+ $overlay      = !empty( $instance['video_overlay'] ) ? $instance['video_overlay']/10 : '0.4';
+ $video_player = 'sp-ytube-video';
+
+ // UPDATE SETTINGS FOR VIMEO PLAYER
+ if( $instance['is_vimeo_player'] ){
+   $video_id = $instance['video_id'];
+   $video_player = 'shift-vimeo-video';
+ }
 ?>
 
 <!-- SHIFT HERO VIDEO -->
@@ -12,7 +19,7 @@
       <img src="<?php _e( wp_get_attachment_url( $instance['image'] ) );?>" alt="Hero Image" />
     </div>
     <div class="overlay"></div>
-    <div class="btn-play" data-video="<?php _e( $video_id );?>" data-behaviour="sp-ytube-video">
+    <div class="btn-play" data-video="<?php _e( $video_id );?>" data-behaviour="<?php _e( $video_player );?>">
       <span class="play-icon"></span>
     </div>
     <div class="video-text">

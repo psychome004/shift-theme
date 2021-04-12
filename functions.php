@@ -10,6 +10,7 @@ add_action('wp_enqueue_scripts',function(){
   wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@next/dist/aos.js', array('jquery'), null, true );
   wp_enqueue_script( 'shift-slider', get_stylesheet_directory_uri().'/assets/js/shift-slider.js', array( 'jquery' ), time(), true );
   wp_enqueue_script('shift-user-popup-js', get_stylesheet_directory_uri().'/assets/js/shift-user-popup.js', array('jquery'), time() ); // SHIFT USER POPUP SCRIPT
+  wp_enqueue_script('shift-vimeo-modal-js', get_stylesheet_directory_uri().'/assets/js/vimeo-video-modal.js', array('jquery'), time() ); // SHIFT VIMEO MODAL
 
 }, 99);
 

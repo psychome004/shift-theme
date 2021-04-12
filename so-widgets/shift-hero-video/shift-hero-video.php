@@ -37,14 +37,10 @@ class SHIFT_HERO_VIDEO extends SiteOrigin_Widget {
 				),
 				'video_id' => array(
 					'type' 			=> 'text',
-					'label' 		=> __( 'Video Id', 'siteorigin-widgets' ),
+					'label' 		=> __( 'Video URL / ID', 'siteorigin-widgets' ),
 					'default' 	=> '',
+					'description'	=>	__( 'Add video url for youtube videos and video id for vimeo videos', 'siteorigin-widgets' ),
 				),
-				// 'arrow_target' => array(
-				// 	'type' 			=> 'text',
-				// 	'label' 		=> __( 'Target Id', 'siteorigin-widgets' ),
-				// 	'default' 	=> '',
-				// ),
 				'video_overlay' => array(
 					'type' 				=> 'slider',
 					'label' 			=> __( 'Video Overlay', 'siteorigin-widgets' ),
@@ -53,6 +49,12 @@ class SHIFT_HERO_VIDEO extends SiteOrigin_Widget {
 					'max'					=> 10,
 					'integer' 		=> true,
 					'description'	=>	__( 'Default value 4. Max value 10', 'siteorigin-widgets' ),
+				),
+				'is_vimeo_player' => array(
+					'type' 		=> 'checkbox',
+					'label' 	=> __( 'Open in Vimeo Player?', 'siteorigin-widgets' ),
+					'default' => false,
+					'description'	=>	__( 'Check only if its a vimeo video', 'siteorigin-widgets' ),
 				),
 			),
 			//The $base_folder path string.
