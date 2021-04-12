@@ -1,15 +1,14 @@
 <?php
  global $youtube;
  $img_path     = get_stylesheet_directory_uri().'/assets/images/';
- $video_id     = !empty( $instance['video_id'] ) ? $youtube->get_video_id( $instance['video_id'] ) : '';
  $overlay      = !empty( $instance['video_overlay'] ) ? $instance['video_overlay']/10 : '0.4';
- $video_player = 'sp-ytube-video';
+ $video_player = $instance['select_video_player'];
 
- // UPDATE SETTINGS FOR VIMEO PLAYER
- if( $instance['is_vimeo_player'] ){
-   $video_id = $instance['video_id'];
-   $video_player = 'shift-vimeo-video';
- }
+ // UPDATE SETTINGS FOR VIDEO PLAYER
+ if( $video_player && ( $video_player == 'sp-ytube-video' ) ){
+    $video_id     = !empty( $instance['video_id'] ) ? $youtube->get_video_id( $instance['video_id'] ) : '';
+ } else{ $video_id = $instance['video_id']; }
+
 ?>
 
 <!-- SHIFT HERO VIDEO -->

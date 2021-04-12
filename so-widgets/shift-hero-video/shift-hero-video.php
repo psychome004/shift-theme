@@ -39,7 +39,7 @@ class SHIFT_HERO_VIDEO extends SiteOrigin_Widget {
 					'type' 			=> 'text',
 					'label' 		=> __( 'Video URL / ID', 'siteorigin-widgets' ),
 					'default' 	=> '',
-					'description'	=>	__( 'Add video url for youtube videos and video id for vimeo videos', 'siteorigin-widgets' ),
+					'description'	=>	__( 'Add video url for youtube / uploaded videos and video id for vimeo videos', 'siteorigin-widgets' ),
 				),
 				'video_overlay' => array(
 					'type' 				=> 'slider',
@@ -50,12 +50,18 @@ class SHIFT_HERO_VIDEO extends SiteOrigin_Widget {
 					'integer' 		=> true,
 					'description'	=>	__( 'Default value 4. Max value 10', 'siteorigin-widgets' ),
 				),
-				'is_vimeo_player' => array(
-					'type' 		=> 'checkbox',
-					'label' 	=> __( 'Open in Vimeo Player?', 'siteorigin-widgets' ),
-					'default' => false,
-					'description'	=>	__( 'Check only if its a vimeo video', 'siteorigin-widgets' ),
-				),
+				'select_video_player' => array(
+        	'type' => 'select',
+        	'label' => __( 'Select Video Player', 'siteorigin-widgets' ),
+					'default' => 'sp-ytube-video',
+        	'options' => array(
+						'sp-ytube-video'		=> __( 'Youtube', 'siteorigin-widgets' ),
+						'shift-vimeo-video' => __( 'Vimeo', 'siteorigin-widgets' ),
+            'shift_html5_video' => __( 'HTML5', 'siteorigin-widgets' ),
+        	),
+					'description'	=>	__( 'Default : Youtube Player.', 'siteorigin-widgets' ),
+    		),
+
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/shift-hero-video"
