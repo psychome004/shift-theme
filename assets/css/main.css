@@ -1093,12 +1093,11 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   }
   .header5 .social-icons{
     text-align: center;
-    background-color: #2e4857;
+    background-color: #2e3d59;
   }
 
   .header5 .social-icons > a{
     border-color: #ffffff;
-    background-color: #ffffff;
   }
   /* SOW HERO IMAGE */
   .shift-hero-img .img-wrapper img{ max-width: 300px; }
