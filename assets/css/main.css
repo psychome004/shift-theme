@@ -828,18 +828,23 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 .shift-grid-4 .post-card {
   position: relative;
   display: inline-block;
-  height: 450px;
+  height: 370px;
   width: 100%;
   -webkit-perspective: 1500;
   -webkit-transform-style: preserve-3d;
 }
 .shift-grid-4 .post-card .front,
-.shift-grid-4 .post-card .back {
+.shift-grid-4 .post-card .back,
+.shift-grid-4 .post-card .back-inner{
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.shift-grid-4 .post-card .front,
+.shift-grid-4 .post-card .back {
   transition: all 0.8s ease-in-out;
   overflow: hidden;
   text-align: left;
@@ -854,13 +859,19 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   z-index: 2;
   display: flex;
   align-items: center;
+  transform: rotateY(0);
+  padding: 15px;
+}
+
+.shift-grid-4 .post-card .front,
+.shift-grid-4 .post-card .back-inner{
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center  center;
-  transform: rotateY(0);
-  padding: 15px;
 }
+
+.shift-grid-4 .post-card .back-inner{ display: none; z-index: -1; }
 
 .shift-grid-4 .post-card h2.title{
   margin: 0;
@@ -1157,7 +1168,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   .shift-grid-4 .post-item{ margin-bottom: 30px; }
   .shift-grid-4 .post-card .front { transform: rotateY(180deg); }
   .shift-grid-4 .post-card .back { transform: rotateY(0); }
-
+  .shift-grid-4 .post-card .back-inner{ display: block; }
 }
 
 @media (max-width: 500px){

@@ -5,6 +5,7 @@
   </div>
   <a class="post-url" href="<?php the_permalink(); ?>" role="button">
     <div class="back">
+      <div class="back-inner" style="background-image: url(<?php echo( $image_url ? $image_url[0] : '' );?>)"></div>
       <h4 class="title"><?php the_title();?></h4>
       <div class="content">
         <?php the_excerpt();?>
