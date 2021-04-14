@@ -846,7 +846,8 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   box-shadow: rgba(0, 0, 0, 0.7) 0 2px 6px -2px;
   border-radius: 10px;
   backface-visibility: hidden;
-  color: #fff;
+  color: #ffffff;
+  background-color: #a6dce2;
 }
 .shift-grid-4 .post-card .front {
   transform: rotateY(0);
@@ -854,14 +855,26 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center  center;
+  transform: rotateY(0);
 }
 
-.shift-grid-4 .post-card h2.title  {
+.shift-grid-4 .post-card h2.title{
   margin: 0;
-  padding: 0;
-  font-size: 30px;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.shift-grid-4 .post-card h4.title{
+  font-size: 25px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 5px;
   text-transform: uppercase;
 }
 
@@ -890,16 +903,6 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   width: 100%;
   height: 100%;
 }
-
-.shift-grid-4 .post-card .front{
-  background-color: #a6dce2;
-}
-
-.shift-grid-4 .post-item:nth-child(even) .post-card .front{
-  background-color: #efefef;
-  color: #2e3d59;
-}
-
 
 /* SHIFT VIMEO VIDEO MODAL */
 #shift-vimeo-modal,
