@@ -828,7 +828,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 .shift-grid-4 .post-card {
   position: relative;
   display: inline-block;
-  height: 400px;
+  height: 450px;
   width: 100%;
   -webkit-perspective: 1500;
   -webkit-transform-style: preserve-3d;
@@ -859,6 +859,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   background-repeat: no-repeat;
   background-position: center  center;
   transform: rotateY(0);
+  padding: 15px;
 }
 
 .shift-grid-4 .post-card h2.title{
@@ -871,10 +872,11 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 }
 
 .shift-grid-4 .post-card h4.title{
+  font-weight: bold;
   font-size: 25px;
   line-height: 1;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -886,7 +888,7 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 .shift-grid-4 .post-card .back {
   background-color: #2e3d59;
   transform: rotateY(-180deg);
-  padding: 20px;
+  padding: 30px;
 }
 .shift-grid-4 .post-card .btn {
   padding: 10px 20px;
