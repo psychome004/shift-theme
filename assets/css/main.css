@@ -824,59 +824,82 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
 	background-color: #ffbd13;
 }
 
-/* ORBIT 3 GRID */
-.shift-grid-3 .post-wrapper{
-  padding: 50px 25px;
-  background-color: #a6dce2;
-  height: 100%;
+/* ORBIT 4 GRID CARD FLIPPER */
+.shift-grid-4 .post-card {
+  position: relative;
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  -webkit-perspective: 1500;
+  -webkit-transform-style: preserve-3d;
 }
-.shift-grid-3 .post-item:nth-child(even) .post-wrapper{
-  background-color: #efefef;
+.shift-grid-4 .post-card .front,
+.shift-grid-4 .post-card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.8s ease-in-out;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 2px 6px -2px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  color: #fff;
 }
-.shift-grid-3 .post-inner{
+.shift-grid-4 .post-card .front {
+  transform: rotateY(0);
+  z-index: 2;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #2e3d59;
+  align-items: center;
+  justify-content: center;
 }
-.shift-grid-3 .title{
-  font-size: 20px;
-  font-weight: 600;
+
+.shift-grid-4 .post-card h2.title  {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 0 0 20px;
 }
 
-.shift-grid-3 .content{
+.shift-grid-4 .content{
   font-size: 17px;
+  margin-bottom: 20px;
 }
 
-.shift-grid-3 .post-btn{
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 600;
-  color: #ffffff;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  outline: none;
-  letter-spacing: 2px;
-  padding: 12px 24px;
-  margin-top: 20px;
+.shift-grid-4 .post-card .back {
   background-color: #2e3d59;
-  border: 3px solid #2e3d59;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  transform: rotateY(-180deg);
+  padding: 20px;
+}
+.shift-grid-4 .post-card .btn {
+  padding: 10px 20px;
+  display: inline-block;
+  color: #2e3d59;
+  background-color: #a6dce2;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
 }
 
-.shift-grid-3 .post-btn:hover{
-  color: #2e3d59;
-  background-color: #ffffff;
+.shift-grid-4 .post-btn{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
+
+.shift-grid-4 .post-card .front{
+  background-color: #a6dce2;
+}
+
+.shift-grid-4 .post-item:nth-child(even) .post-card .front{
+  background-color: #efefef;
+  color: #2e3d59;
+}
+
 
 /* SHIFT VIMEO VIDEO MODAL */
 #shift-vimeo-modal,
@@ -980,11 +1003,18 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     line-height: 27px;
   }
 
-  /* ORBIT 3 GRID */
-  .shift-grid-3{
+  /* ORBIT 4 GRID */
+  .shift-grid-4{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 0;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 15px;
+  }
+
+  .shift-grid-4 .post-card:hover .front {
+    transform: rotateY(180deg);
+  }
+  .shift-grid-4 .post-card:hover .back {
+    transform: rotateY(0);
   }
 
   /* SOW Shift USER POPUP */
@@ -1117,6 +1147,11 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* ORBIT 4 GRID CARD FLIPPER */
+  .shift-grid-4 .post-item{ margin-bottom: 30px; }
+  .shift-grid-4 .post-card .front { transform: rotateY(180deg); }
+  .shift-grid-4 .post-card .back { transform: rotateY(0); }
 
 }
 
