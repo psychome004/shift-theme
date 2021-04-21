@@ -492,6 +492,12 @@
   position: relative;
 }
 
+/* SHIFT SIMPLE CARD */
+.card-container .card-simple-inner{ padding: 0 20px; box-shadow: 4px 2px 4px 0 #cccccc; }
+.card-container .simple-card-header{ margin-bottom: 10px; }
+.card-container .simple-card-header h4{ font-size: 1.45em; }
+
+
 /* SOW HERO IMAGE */
 .shift-hero-img{
   position: relative;
@@ -1086,6 +1092,14 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   }
   .shift-hero-video .btn-play .play-icon:hover{
     transform:  scale(1.2);
+  }
+
+  /* SHIFT SIMPLE CARD */
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+    margin: 0 auto;
   }
 
 }
