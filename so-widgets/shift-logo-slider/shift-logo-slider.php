@@ -44,6 +44,10 @@ class Shift_Logo_Slider extends SiteOrigin_Widget {
 							'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
 							'library' 	=> 'image',
 							'fallback' 	=> false
+						),
+						'redirect_url' => array(
+							'type' 	 => 'link',
+							'label'  => __( 'URL', 'siteorigin-widgets' ),
 						)
 					)
 				)

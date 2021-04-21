@@ -354,6 +354,12 @@
   right: -80px;
 }
 
+.shift-logos-slider .redirect-url{
+  text-decoration: none;
+  outline: none;
+  display: block;
+}
+
 .shift-logos-slider .slide-inner{
 	background-color: #ffffff;
 	height: 140px;
