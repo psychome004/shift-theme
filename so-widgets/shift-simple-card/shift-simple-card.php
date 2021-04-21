@@ -35,7 +35,6 @@ class Shift_Simple_Card extends SiteOrigin_Widget {
 						'update_event' => 'change',
 						'value_method' => 'val'
 					),
-          // 'item_name' =>  __( 'Add Card', 'siteorigin-widgets' ),
           'fields'    =>  array(
             'card_title'  =>  array(
               'type'  =>  'text',
@@ -43,11 +42,8 @@ class Shift_Simple_Card extends SiteOrigin_Widget {
               'default' =>  '',
             ),
             'card_desc' => array(
-			        'type' => 'tinymce',
-			        'label' => __( 'Description', 'siteorigin-widgets' ),
-			        'default' => '',
-			        'rows' => 10,
-			        'default_editor' => 'tinymce'
+			        'type' 	=> 'builder',
+			        'label' => __( 'Description', 'siteorigin-widgets' )
 				    ),
           )
         ),

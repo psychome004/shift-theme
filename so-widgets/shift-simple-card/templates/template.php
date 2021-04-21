@@ -7,9 +7,9 @@
         <h4><?php _e( $simple_card['card_title'] );?></h4>
       </div>
       <?php if( $simple_card['card_desc'] ):?>
-      <div style="color:<?php _e( $instance['desc_color'] );?>" >
-        <?php _e( $simple_card['card_desc'] );?>
-      </div>
+        <div style="color:<?php _e( $instance['desc_color'] );?>" >
+          <?php echo siteorigin_panels_render( 'card-description', true, $simple_card['card_desc'] );?>
+        </div>
       <?php endif;?>
     </div>
   </div>
