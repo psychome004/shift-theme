@@ -8,7 +8,7 @@
 <div class="shift-hero-builder">
   <div class="shift-hero-video-inner">
     <div class="video-wrapper">
-      <video autoplay loop="true">
+      <video autoplay loop="true" muted>
         <source src="<?php _e( $instance['video_url'] );?>" type="video/mp4" />
       </video>
     </div>
