@@ -1142,6 +1142,16 @@ a[data-behaviour~="shift-user-popup"]:hover .shift-user-body .overlay .name{ vis
   }
   .shift-bg-card{ grid-gap: 50px; }
 
+  /*Swap Honeycomb users */
+  .articles-users .shift-user-card:nth-child(1){
+		margin: -9vw -5vw 0 15vw !important;
+	}
+
+  .articles-users :nth-child(3){
+		margin: 0vw -5vw 0 -30vw !important;
+	}
+
+
 }
 
 @media only screen and (max-width: 768px) and (min-width: 768px){
