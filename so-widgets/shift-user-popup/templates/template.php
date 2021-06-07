@@ -8,7 +8,7 @@
   <div class="articles-users">
     <?php foreach( $instance['shift_users'] as $item ): $image_url = wp_get_attachment_url( $item['user_image'] ); ?>
       <?php
-        $image = !empty( $image ) ? true : false;
+        $image = !empty( $image_url ) ? true : false;
         $name = !empty( $item['user_name'] ) ? true : false;
         $bio  = !empty( $item['user_bio'] ) ? true :  false;
       ?>
@@ -16,7 +16,7 @@
         <a data-target="#shift-user-modal" data-behaviour="shift-user-popup">
           <div class="shift-user-body">
             <div class="user-thumbnail-bg" style="position: relative;">
-              <?php if( $name ): ?>
+              <?php if( $image ): ?>
                 <img src="<?php _e( $image_url );?>" alt="Profile Picture">
               <?php endif; ?>
               <div class="overlay">

@@ -24,7 +24,7 @@ jQuery.fn.shift_user_popup = function() {
             </div>
             <div class="modal-body">
               <div class="shift-user-body">
-                <div class="user-thumbnail-bg" style="background-image:url(${imageUrl});"></div>
+                <div class="user-thumbnail-bg" style="background-image:url(${( imageUrl ? imageUrl : '' )});"></div>
                 <div class="user-meta">
                   <h5 class="name">${( name ? name : '' )}</h5>
                   <div class="separator"></div>
