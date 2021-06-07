@@ -37,6 +37,26 @@ jQuery.fn.shiftSlider = function(options, sliderFn = ''){
 
 }
 
+jQuery.fn.shiftAnimatedCardSlider = function(){
+
+	return this.each(function(){
+		var $el = jQuery( this );
+				$card_wrapper	=	$el.find('.card-wrapper');
+				animationWindowWidth = $el.data('enable-animation');
+
+		// REMOVE AOS ANIMATION BASED ON WINDOW WIDTH
+		if( jQuery(window).width() < animationWindowWidth ) {
+			$card_wrapper.each(function( index, selectedWrapper ){
+				jQuery(selectedWrapper).removeAttr("data-aos data-aos-delay");
+			});
+		}
+
+	});
+
+}
+
+
+
 jQuery(document).ready(function(){
 
 	/* STICKY HEADER */
@@ -59,6 +79,9 @@ jQuery(document).ready(function(){
 	}
 
 	jQuery(window).on("scroll", function(){ shiftHeader(); });
+
+	// ANIMATED SLICK CARD SLIDER
+	jQuery('.card-slider-wrapper.with-animation').shiftAnimatedCardSlider();
 
 	/* SLIDER */
 	jQuery('[data-behaviour~=cards-slick]').shiftSlider({

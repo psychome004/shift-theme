@@ -50,7 +50,30 @@ class Shift_Card_Slider extends SiteOrigin_Widget {
 							'label' => __( 'Card Content', 'siteorigin-widgets'),
 						),
 					)
-				)
+				),
+				'is_animated_card' => array(
+					'type' => 'checkbox',
+					'label' => __( 'Enable animation', 'siteorigin-widgets' ),
+          'description' => 'Clicking on the button will animate the card one by one',
+					'default' => false,
+					'state_emitter' => array(
+						'callback' 	=> 'conditional',
+						'args' 		=> array(
+							'is_animated_card[active]: val',
+							'is_animated_card[inactive]: !val'
+						)
+					),
+				),
+        'animation_pixel' => array(
+          'type'    => 'number',
+          'label'   => __( 'Window Width', 'siteorigin-widgets' ),
+					'default'    	=> '1024',
+					'description' => 'Animation will work only above the specified window width. Default 1024px',
+          'state_handler' => array(
+  					'is_animated_card[active]' 	=> array('show'),
+  					'_else[is_animated_card]' 	=> array('hide'),
+  				),
+				),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/shift-card-slider"
