@@ -507,6 +507,28 @@
 .shift-bg-card .simple-card-header{ margin-bottom: 10px; }
 .card-container .simple-card-header h4,
 .shift-bg-card .simple-card-header h4{ font-size: 1.45em; }
+.card-container .card-simple-inner.with-image{
+  padding: 0;
+}
+.card-simple-inner.with-image .simple-card-bg{
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  background-color: #f5f5f5;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.card-simple-inner.with-image .simple-card-bg::before {
+  display: block;
+  content: "";
+  padding-top: 80%;
+}
+.card-simple-inner.with-image .simple-card-body{ padding: 0 20px; }
 
 /* SHIFT BG CARD */
 .shift-bg-card .card-simple-inner{

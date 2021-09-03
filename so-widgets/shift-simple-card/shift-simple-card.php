@@ -27,6 +27,18 @@ class Shift_Simple_Card extends SiteOrigin_Widget {
 			array(),
 			//The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
 			array(
+				'card_type' => array(
+	        'type'    => 'select',
+	        'label'   => __( 'Choose Card Type', 'siteorigin-widgets' ),
+	        'options' => array(
+						'default-card'		=> 'Default',
+						'card-with-image'	=> 'Card with image',
+					),
+					'state_emitter' => array(
+	        	'callback' 	=> 'select',
+	        	'args' 			=> array( 'card_type' )
+	    		),
+	      ),
         'simple_cards_repeater' => array(
           'type'      => 'repeater',
           'label'     => 'Card Repeater',
@@ -36,6 +48,18 @@ class Shift_Simple_Card extends SiteOrigin_Widget {
 						'value_method' => 'val'
 					),
           'fields'    =>  array(
+						'image' => array(
+							'type' 		=> 'media',
+							'label' 	=> __( 'Choose Image', 'siteorigin-widgets' ),
+							'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
+							'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
+							'library' 	=> 'image',
+							'fallback' 	=> false,
+							'state_handler' => array(
+				        'card_type[default-card]' => array('hide'),
+				        'card_type[card-with-image]' => array('show')
+				    	),
+						),
             'card_title'  =>  array(
               'type'  =>  'text',
               'label' =>  __( 'Title', 'siteorigin-widgets' ),
