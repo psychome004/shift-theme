@@ -8,6 +8,7 @@
 
 	$classes = "card-slider-wrapper";
 	$is_animated_card = $instance['is_animated_card'];
+	$enable_card_editor = $instance['enable_card_editor'];
 	$animation_window_width = !empty( $instance['animation_pixel'] ) ? $instance['animation_pixel'] : '1024';
 	if( $is_animated_card ){
 		$classes .= " with-animation";
@@ -26,7 +27,9 @@
 	            <img src="<?php _e( wp_get_attachment_url( $card['image'] ) );?>" alt="Card Image" />
 	          </div>
 	          <div class="card-content">
-	            <?php echo $card['card_content'];?>
+	            <?php
+								if( ! $enable_card_editor ){ echo $card['card_content']; } else{ echo $card['card_editor_content']; }
+							?>
 	          </div>
 	        </div>
 				</div>

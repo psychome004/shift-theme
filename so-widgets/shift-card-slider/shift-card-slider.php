@@ -48,8 +48,36 @@ class Shift_Card_Slider extends SiteOrigin_Widget {
 						'card_content' => array(
 							'type' 	=> 'textarea',
 							'label' => __( 'Card Content', 'siteorigin-widgets'),
+							'state_handler' => array(
+		  					'enable_card_editor[active]' 	=> array('hide'),
+		  					'_else[enable_card_editor]' 	=> array('show'),
+		  				),
+						),
+						'card_editor_content' => array(
+			        'type' => 'tinymce',
+			        'label' => __( 'Card Content', 'siteorigin-widgets' ),
+			        'default' => '',
+			        'rows' => 10,
+			        'default_editor' => 'tinymce',
+							'state_handler' => array(
+		  					'enable_card_editor[active]' 	=> array('show'),
+		  					'_else[enable_card_editor]' 	=> array('hide'),
+		  				),
 						),
 					)
+				),
+				'enable_card_editor' => array(
+					'type' => 'checkbox',
+					'label' => __( 'Enable Texteditor ?', 'siteorigin-widgets' ),
+          'description' => 'Clicking on the button will replace textarea with texteditor field in card content section',
+					'default' => false,
+					'state_emitter' => array(
+						'callback' 	=> 'conditional',
+						'args' 		=> array(
+							'enable_card_editor[active]: val',
+							'enable_card_editor[inactive]: !val'
+						)
+					),
 				),
 				'is_animated_card' => array(
 					'type' => 'checkbox',
